@@ -1,45 +1,37 @@
 plugins {
+    id 'java'
+    id 'eclipse'
     id 'org.springframework.boot' version '2.4.1'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
-    id 'java'
 }
 
 group = 'com.tutorial1'
-version = '0.0.1-SNAPSHOT' +new Date().format("yyyyMMddHHmmss")
+version = '0.0.1-SNAPSHOT' + new Date().format("yyyyMMddHHmmss")
 sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
     jcenter()
-
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-devtools'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'junit:junit:4.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.4'
 
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.projectlombok:lombok'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'com.h2database:h2'
-    implementation 'org.springframework.session:spring-session-jdbc'
+
     implementation 'io.jsonwebtoken:jjwt:0.9.1'
+    implementation 'jakarta.validation:jakarta.validation-api:2.0.2'
+
     implementation 'mysql:mysql-connector-java'
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
 //    implementation 'org.mariadb.jdbc:mariadb-java-client'
 
-    annotationProcessor 'org.projectlombok:lombok:1.18.4'
-
-    implementation 'jakarta.validation:jakarta.validation-api:2.0.2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 }
-
-test {
-    useJUnitPlatform()
-}
-
-// Spring Boot Gradle Plugin Reference Guide
-// https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/htmlsingle/
-
-// 작성 법 참고
-//http://honeymon.io/tech/2019/06/17/spring-boot-2-start.html

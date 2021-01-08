@@ -8,6 +8,10 @@ server:
       force: true
 
 spring:
+  h2:
+    console:
+      enabled: true
+
   datasource:
     url: jdbc:mysql://localhost:3306/testdb?serverTimezone=UTC&useLegacyDatetimeCode=false
     username: root
@@ -28,3 +32,5 @@ bezkoder:
   app:
     jwtSecret: bezKoderSecretKey
     jwtExpirationMs: 10800000
+
+
