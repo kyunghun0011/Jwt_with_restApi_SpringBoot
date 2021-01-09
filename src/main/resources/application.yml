@@ -1,32 +1,47 @@
-server:
-  port: 8080
-  servlet:
-    context-path: /
-    encoding:
-      charset: UTF-8
-      enabled: true
-      force: true
+#server:
+#  port: 8080
+#  servlet:
+#    context-path: /
+#    encoding:
+#      charset: UTF-8
+#      enabled: true
+#      force: true
+#
+#spring:
+#  h2:
+#    console:
+#      enabled: true
+#
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/testdb?serverTimezone=UTC&useLegacyDatetimeCode=false
+#    username: root
+#    password: root
+#
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#
+#    hibernate:
+#      ddl-auto: none
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#    show-sql: true
+#    generate-ddl: true
 
 spring:
-  h2:
-    console:
-      enabled: true
-
-  datasource:
-    url: jdbc:mysql://localhost:3306/testdb?serverTimezone=UTC&useLegacyDatetimeCode=false
-    username: root
-    password: root
-
+  profiles:
+    include: dev
   jpa:
+    show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-
-    hibernate:
-      ddl-auto: none
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    show-sql: true
+  h2:
+    console:
+      enabled: true
+  session:
+    store-type: jdbc
 
 bezkoder:
   app:
