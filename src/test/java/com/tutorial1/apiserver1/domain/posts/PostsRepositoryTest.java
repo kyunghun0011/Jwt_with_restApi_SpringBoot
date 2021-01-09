@@ -29,10 +29,9 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void 게시글저장_불러오기() {
+    public void postsRepo_test() {
         //given
         // !! 현재 한글로 테스트 오류남
-
 //        String title = "테스트 게시글";
 //        String content = "테스트 본문";
 
@@ -55,7 +54,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void BaseTimeEntity_등록() {
+    public void BaseTimeEntity_등록_test() {
         //given
         LocalDateTime now = LocalDateTime.of(2019, 6, 4, 0, 0, 0);
         postsRepository.save(Posts.builder()
@@ -69,7 +68,7 @@ public class PostsRepositoryTest {
         //then
         Posts posts = postsList.get(0);
 
-        System.out.println(">>>>>>>>> createDate=" + posts.getCreatedDate() + ", modifiedDate=" + posts.getModifiedDate());
+        System.out.println("#createDate=" + posts.getCreatedDate() + ", #modifiedDate=" + posts.getModifiedDate());
 
         assertThat(posts.getCreatedDate()).isAfter(now);
         assertThat(posts.getModifiedDate()).isAfter(now);
