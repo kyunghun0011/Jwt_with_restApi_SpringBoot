@@ -1,5 +1,7 @@
 package com.tutorial1.apiserver1.models;
 
+import lombok.Builder;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -41,6 +43,7 @@ public class User {
     public User() {
     }
 
+    @Builder
     public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
