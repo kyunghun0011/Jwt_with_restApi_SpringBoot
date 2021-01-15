@@ -87,19 +87,3 @@ public class UserDetailsImpl implements UserDetails {
         return Objects.equals(id, user.id);
     }
 }
-
-/* MEMO
-
-Collection<? extends
-* he syntax ? extends E means "some type that either is E or a subtype of E". The ? is a wildcard.
-
-The code Arrays.asList("a","b","c") is inferred to return a List<String>,
-and new ArrayList<> uses the diamond operator,
- so that yields an ArrayList<String>.
-
-The wildcard allows you to infer a subtype -- you could assign it to a reference variable with a supertype:
-
-List<CharSequence> list = new ArrayList<>(Arrays.asList("a","b","c"));
-Here, E is inferred as CharSequence instead of String, but that works, because String is a subtype of CharSequence.
-
-* */
