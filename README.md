@@ -1,13 +1,14 @@
 ## JWT + REST API
 ## Resource components
 - 회원가입
-- 로그인
-- 게시판 기능
+- 로그인, 로그아웃
+- 게시판
 
 | method | resource      | description                       |
 -----|:--------------|:----------------------------------|
 POST   | `/api/auth/signup`     | 회원가입 |
 POST   | `/api/auth/signin`     | 로그인 |
+POST   | `/api/auth/signout`    | 로그아웃 |
 POST   | `/api/board/post`      | 게시판 글작성 | 
 GET    | `/api/board/post`      | 게시판 전체 글 목록 가져오기 |
 GET    | `/api/board/post/{pathVariable}`  | 게시판 글읽기 |
