@@ -53,5 +53,5 @@ DELETE | `/api/board/post/{pathVariable}` | 게시판 글삭제 |
 
 ## Documentation history
 - v1, jwt 인증
-- v2, 회원가입, 로그인
-- v3, 게시판 기능
+- v2, 회원가입, 로그인, 로그아웃
+- v3, 게시판 기능(CRUD)
